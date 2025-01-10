@@ -1,5 +1,6 @@
 //GESTION MENU BURGER//
 // Gestion des sous  menus pour fermer l'un lorsque l'autre s'ouvre
+
 document.querySelectorAll('.dropdown-submenu .dropdown-toggle').forEach(function (element) {
     element.addEventListener('click', function (event) {
         event.stopPropagation(); // Empêche la fermeture automatique du menu principal
@@ -11,7 +12,8 @@ document.querySelectorAll('.dropdown-submenu .dropdown-toggle').forEach(function
                 menu.classList.remove('show');
             }
         });
-
+        
+        
         // Affiche ou masque le sous menu actuel
         const nextMenu = this.nextElementSibling;
         if (nextMenu && nextMenu.classList.contains('dropdown-menu')) {
@@ -19,6 +21,7 @@ document.querySelectorAll('.dropdown-submenu .dropdown-toggle').forEach(function
         }
     });
 });
+
 
 
 //FORMULAIRE INSCRIPTION
@@ -59,12 +62,21 @@ checkboxError.style.borderRadius = '5px'
 checkboxError.style.padding = '0px 10px'
 checkboxError.style.Width = '100%'; 
 
+/*OBLIGATION DE CHECKER LA BOX*/
+
 form.addEventListener('submit', function (e){
     if (!checkbox.checked){
         e.preventDefault();
-        checkboxError.style.display = 'block'
+        checkboxError.style.display = 'block';
+    }else{
+        checkboxError.style.display='none'
+    }
+})
+checkbox.addEventListener('input', ()=>{
+    if(checkbox.checked){
+        checkbox.setCustomValidity(' ')
     } else{
-        checkboxError.style.display = 'none'
+        checkbox.setCustomValidity('Vous devez accepeter les conditions générales pour poursuivre')
     }
 })
 
@@ -92,6 +104,7 @@ form.addEventListener('submit', function (e){
     } else{
         logInputPassword.style.border = 'solid 2px red'
         passwordMessage.innerText = "Le mot de passe doit contenir: $&@!"
+        passwordMessage.style.margin = '0px 0px'
         passwordMessage.style.backgroundColor = 'red'
     }
 })

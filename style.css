@@ -1,6 +1,21 @@
  *{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
  }
+ /* Masque les sous-menus */
+.submenu {
+    display: none;
+}
+
+/* Affiche le sous-menu actif */
+.submenu.active {
+    display: block;
+}
+
+/* Cache le menu principal lorsqu'un sous-menu est actif */
+.menu-hidden {
+    display: none !important;
+}
+
 /* header */
 header{
     display: flex;
@@ -234,7 +249,7 @@ form{
 }
 .bandeau-seConnecter{
         border-radius: 5px;
-        background-color: lightgrey;
+        background-color: #365c36;
         margin: 0px 50px 20px 50px;
         text-align: center;
 }
@@ -257,6 +272,16 @@ form{
     margin: 0 auto;
     max-width: max-content;
     
+    #errorCheckbox{
+        display: none;
+        max-width: 243.8px;
+    }
+    #messageConfirmPassword{
+        max-width: 243.8px;
+    }
+    #messagePassword{
+        max-width: 243.8px;
+    }
     label{
         display: block;
         margin-bottom: 5px;
@@ -268,6 +293,10 @@ form{
         margin-bottom: 10px;
         border: 1px solid #ccc;
     } 
+    p{
+        width: 100%;
+        margin: 0px 0px;
+    }
     #errorCheckbox{/*CHECKBOX A VALIDER*/
         background-color: red;
     }
