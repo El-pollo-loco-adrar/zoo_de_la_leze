@@ -1,0 +1,288 @@
+/* #containerTotal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+} */
+ *{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+/* header */
+header{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    
+    .fondHeader{
+        position: relative;
+        width: 100%;
+        height: 100px;
+        background-size: cover;
+        background-position: center;
+    }
+    .dropdown-toggle::after{
+        content: none; /* Enlève l'icone de Bootstrap */
+    }
+    .btnGroup{ /*Menu burger*/
+        position: absolute;
+        align-self: center;
+        left: 20px;
+       
+        .dropdown-menu .dropdown-menu { /*Sous menus*/
+            background-color: white;
+            .dropdown-item{
+                background-color: rgb(15, 91, 66, 0.1);
+            }
+        }
+        .dropdown-submenu .dropdown-menu {
+            top: 100%; /* Place le sous menu juste en dessous */
+            left: 0;   /* Aligne le sous menu avec son parent */
+        }
+    
+        .dropdown-submenu{
+            position: relative;
+        }
+        .dropdown-menu{
+            width: 92vw; /* largeur du menu*/ 
+
+            .dropdown-item{
+                background-color: rgb(15, 91, 66, 0.6);
+                margin-bottom: 20px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-style: oblique;
+                font-weight: bold;
+            }            
+        }
+    }
+    .logo{
+        position: absolute;
+        align-self: center;
+        
+        
+    }
+    .btnAccueil{
+        position: absolute;
+        align-self: center;
+        right: 20px;
+    }
+}
+/* BARRE SEPARATION SOUS LE HEADER*/
+#separate{
+    border: solid black 2px;
+}
+#carouselMenu{
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+/*TEXTE ACCUEIL*/
+.presentation{
+    padding: 20px 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+/*INSCIPTION NEWSLETTER + BOUTON*/
+.newsLetter{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    background-color: #F5EFE6;
+    
+    p{
+        color: #2B1D00;
+    }
+    .inscription{
+        color: #433831;
+        font-weight: bold;
+    }
+    a{
+        border-radius: 10%;
+        padding: 5px 50px;
+        color: black;
+        text-decoration: none;
+        background-color: orange;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+}
+/* CAROUSEL PARC*/
+#carouselParc{
+    margin: 20px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+/* BOUTON ACCUEIL */
+#btnAccueil{
+    text-align: center;
+    padding: 20px;
+    a{
+      border: 1px solid black;  
+      border-radius: 10%;
+      padding: 5px;
+      color: black;
+      text-decoration: none;
+      background-color: orange;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+}
+/*BOUTON RETOUR ARRIERE*/
+.bouton-retour{
+    margin-top: 10px;
+}
+/* PAGES DU FOOTER,MENTIONS LEGALES, CGU, CONFIDENTIALITE, PROPRIETE INTELLECTUELLE, COOKIES */
+article{
+    border: solid lightgray 2px;
+    box-shadow: 5px 5px 5px whitesmoke ;
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 4%;
+    margin: 0% 5%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    ul{
+        text-align: left;
+    }
+    h2{
+        font-weight: bold;
+        font-size: larger;
+    }
+    h4{
+        font-size: larger;
+    }
+    h5{
+        font-size: larger;
+    }
+
+}
+/* FOOTER */
+footer{
+    background-color: #2E3835;
+    width: 100%;
+    height: 130px;
+    position: relative;
+    bottom: 0;
+    
+
+    a{
+        color: white;
+        text-decoration: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    #lienSocial{
+
+        .bi-facebook{
+            color: blue;
+        }
+    }
+}
+
+/*PAGES JEU*/
+#presentationJeu{
+    background-image:linear-gradient(to top, rgba(21, 64, 1, 0.7)0%, rgba(59, 115, 2, 0.7) 31%); /*Couleur fond pages jeu*/
+    text-align: center;
+    padding: 10px 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    #presentationJeu-text1{
+        font-size: larger;
+    }
+}
+.lien-jeu{
+    position: relative; /* Nécessaire pour positionner le texte */
+    display: inline-block; /* Pour adapter la taille au contenu */
+}
+.lien-jeu a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Ajuste le point de référence pour centrer */
+    color: white;
+    text-decoration: none; 
+    font-size: 20px; 
+    font-weight: bold; 
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px; 
+    border-radius: 5px; 
+}
+/*CONNEXION JEU*/
+form{
+    
+    .mb-3{
+        padding: 5px 20px;
+    }
+    #containerBtn{
+        text-align: center;
+    }     
+}
+.bandeau-seConnecter{
+        border-radius: 5px;
+        background-color: lightgrey;
+        margin: 0px 50px 20px 50px;
+        text-align: center;
+}
+.couleur-connexion{
+    background-image: linear-gradient(to top, rgba(21, 64, 1, 0.7)0%, rgba(59, 115, 2, 0.7) 31%);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#creation-compte{
+    p{
+        margin: 20px 50px 0px 50px;
+        border-radius: 5px;
+        background-color: lightgrey;
+    }
+    a{
+        text-decoration: none;
+        color: orange;
+    }
+}
+/*INSCRIPTION JEU*/
+#formulaireInscription{
+    margin: 0 auto;
+    max-width: max-content;
+    
+    label{
+        display: block;
+        margin-bottom: 5px;
+        /* font-weight: bold; */
+    }
+    input{ /*FORMULAIRE */
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+    } 
+    #errorCheckbox{/*CHECKBOX A VALIDER*/
+        background-color: red;
+    }
+    #containerInscriptionButton{ /* BOUTON VALIDER*/
+        display: flex;
+        padding: 10px;
+        #inscriptionButton{
+            margin: auto;
+            padding: 5px;
+            background-color: orange;
+            color: black;
+            border-radius: 2px;
+        }
+    }
+}
+
+ 
+    /*input{
+        width: 90%;
+        padding: 8px;
+        margin-left: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .checkbox-container{
+        
+        
+
+        }
+        input{
+            margin-left: 0;
+        }
+    } */
