@@ -49,12 +49,15 @@ passwordConfirmMessage.style.textAlign= 'center'
 passwordConfirmMessage.style.borderRadius = '5px'
 passwordConfirmMessage.style.padding = '0px 10px'
 passwordConfirmMessage.style.Width = '100%'; 
-passwordConfirmMessage.style.padding = '0px 10px'; 
+
 
 
 const checkbox = document.querySelector('#accept')
 const checkboxError = document.querySelector('#errorCheckbox')
-checkboxError.style.width = '100%'
+checkboxError.style.textAlign= 'center'
+checkboxError.style.borderRadius = '5px'
+checkboxError.style.padding = '0px 10px'
+checkboxError.style.Width = '100%'; 
 
 form.addEventListener('submit', function (e){
     if (!checkbox.checked){
