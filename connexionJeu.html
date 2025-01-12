@@ -25,25 +25,25 @@
     </div>
     <div id="separate"></div> 
         </header>
-                    <!--BARRE DE SEPARATION-->
         
-        
+                                    <!--BARRE DE SEPARATION-->
+                                    <div id="separate"></div>  
         <div>
                 <!--CONNEXION-->
             <p class="bandeau-seConnecter">Se connecter</p>
-            <button onclick="history.back()" class="btn btn-warning mb-4">
-                <span class="me-2">&lt;</span> 
-            </button>
+            
+                <!--BOUTON RETOUR ARRIERE-->
+            <button class="back-button" onclick="goBack()"><</button>
 
             <form> <!--FORMULAIRE DE CONNEXION-->
                 <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Mon Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 
                 </div>
                 <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="password" class="form-control" id="exampleInputPassword1" required>
                 </div>
 
                 <!--<div class="mb-3 form-check">

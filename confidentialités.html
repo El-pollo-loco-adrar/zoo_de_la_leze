@@ -12,16 +12,22 @@
         <!--IMAGE DE FOND HEADER-->
 <img class="fondHeader" src="images\feuilles 1.png" alt="header">
 
-
-                <!-- MENU BURGER -->            
-    
 <div class="btnGroup">
     <button type="button" class="btn" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" style="padding: 0; border: none; background: none;">
         <img src="images/burgerorange.png" alt="Menu" style="width: 50px; height: 60px; object-fit: cover;">
     </button>
 
-   <ul class="dropdown-menu dropdown-menu-xl-end">               
+   <ul class="dropdown-menu dropdown-menu-xl-end ">               
 
+            <!-- LES ANIMAUX -->
+        <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#">LES ANIMAUX</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Les petits animaux</a></li>
+                <li><a class="dropdown-item" href="#">Les animaux imposants</a></li>
+                <li><a class="dropdown-item" href="#">Les podcasts de Mr Panda</a></li>
+            </ul>
+        </li>
                         <!-- NOTRE PARC -->
         <li class="dropdown-submenu">
             <a class="dropdown-item dropdown-toggle" href="#"> NOTRE PARC</a>
@@ -31,15 +37,6 @@
             </ul>
         </li>
 
-                        <!-- LES ANIMAUX -->
-        <li class="dropdown-submenu">
-            <a class="dropdown-item dropdown-toggle" href="#">LES ANIMAUX</a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Les petits animaux</a></li>
-                <li><a class="dropdown-item" href="#">Les animaux imposants</a></li>
-                <li><a class="dropdown-item" href="#">Les podcasts de Mr Panda</a></li>
-            </ul>
-        </li>
 
                         <!-- LA NATURE -->
         <li class="dropdown-submenu">
@@ -64,17 +61,20 @@
         </li>
                             <!-- ACCES AU JEU DE PISTE -->
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">LE JEUX DU ZOO</a></li>
+        <li><a class="dropdown-item" href="jeuduParc.html">LE JEUX DU ZOO</a></li>
 
     </ul>
-</div>
+</div> 
+
+                
+                
 
 
 
 
         <!--LOGO-->
 <div class="logo">
-    <a href="index.html"><img src="images/logo.png" alt="logo" style="width: 100px; height: 100px; object-fit: cover;" ></a>
+    <a href="index.html"><img src="images/logo.png" alt="logo" style="width: 100px; height: 100px; object-fit: cover;"></a>
 </div>
 
         <!-- BOUTON ACCUEIL-->
@@ -82,15 +82,13 @@
     <a href="index.html"><img src="images\iconretour.png" alt="accueil" style="width: 50px; height: 60px; object-fit: cover;"></a>
 </div>
 
-</header> 
+    </header> 
             <!--BARRE DE SEPARATION-->
     <div id="separate"></div>
  
-    <!--BOUTON RETOUR-->
-    <div class="bouton-retour">
-        <button onclick="history.back()" class="btn btn-warning mb-4">
-        <span class="me-2">&lt;</span>
-    </div>
+
+            <!--BOUTON RETOUR ARRIERE-->
+    <button class="back-button" onclick="goBack()"><</button>
     <article>
         <h2>Données personnelles
             Politique de protection des données à caractère personnel

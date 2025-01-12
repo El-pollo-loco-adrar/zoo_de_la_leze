@@ -22,7 +22,11 @@ document.querySelectorAll('.dropdown-submenu .dropdown-toggle').forEach(function
     });
 });
 
+//BOUTON RETOUR ARRIERE
 
+function goBack() {
+    window.history.back();
+}
 
 //FORMULAIRE INSCRIPTION
 const form = document.querySelector('#formulaireInscription')
@@ -62,25 +66,9 @@ checkboxError.style.borderRadius = '5px'
 checkboxError.style.padding = '0px 10px'
 checkboxError.style.Width = '100%'; 
 
-/*OBLIGATION DE CHECKER LA BOX*/
 
-form.addEventListener('submit', function (e){
-    if (!checkbox.checked){
-        e.preventDefault();
-        checkboxError.style.display = 'block';
-    }else{
-        checkboxError.style.display='none'
-    }
-})
-checkbox.addEventListener('input', ()=>{
-    if(checkbox.checked){
-        checkbox.setCustomValidity(' ')
-    } else{
-        checkbox.setCustomValidity('Vous devez accepeter les conditions générales pour poursuivre')
-    }
-})
-
-/* REGEX MAIL*/ logInputMail.addEventListener('keyup', ()=>{ 
+/* REGEX MAIL*/ 
+logInputMail.addEventListener('keyup', ()=>{ 
     const regexMail = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
 
     if (regexMail.test(logInputMail.value)){
@@ -94,28 +82,40 @@ checkbox.addEventListener('input', ()=>{
     }
 })
 
-/* REGEX PASSWORD*/ logInputPassword.addEventListener('keyup', ()=>{
+/* REGEX PASSWORD*/ 
+logInputPassword.addEventListener('keyup', ()=>{
     const charSpecial = /[$&@!]/;
 
     if (charSpecial.test(logInputPassword.value)){
-        logInputPassword.style.border = 'solid 2px green'
-        passwordMessage.innerText = "Le mot de passe est valide"
-        passwordMessage.style.backgroundColor = 'green'
+        logInputPassword.style.border = 'solid 5px green'
+        passwordMessage.style.display = "none"
     } else{
         logInputPassword.style.border = 'solid 2px red'
-        passwordMessage.innerText = "Le mot de passe doit contenir: $&@!"
+        passwordMessage.innerText = "Le mot de passe doit contenir au moins un caractère spécial ($, &, @, ! )"
         passwordMessage.style.margin = '0px 0px'
         passwordMessage.style.backgroundColor = 'red'
     }
 })
 
-/*VERIF CONFIRMATION PASSWORD*/ logInputConfirmPassword.addEventListener('keyup', () =>{ 
+/*VERIF CONFIRMATION PASSWORD*/ 
+logInputConfirmPassword.addEventListener('keyup', () =>{ 
     if(logInputPassword.value === logInputConfirmPassword.value) {
-        passwordConfirmMessage.innerText = 'Les mots de passe correspondent'
+        logInputConfirmPassword.style.border = 'solid 5px green'
         passwordConfirmMessage.style.backgroundColor = 'green'
+        passwordConfirmMessage.style.display = 'none'
     } else{
         passwordConfirmMessage.innerText = 'Les mots ne passe ne correspondent pas'
         passwordConfirmMessage.style.backgroundColor = 'red'
+    }
+})
+
+/*OBLIGATION DE CHECKER LA BOX*/
+form.addEventListener('submit', function (e){
+    if (!checkbox.checked){
+        e.preventDefault(); /*Empèche envoie du formulaire si checkbox pas cochée*/
+        checkboxError.style.display = 'block'; /*Affiche message du HTML*/
+    }else{
+        checkboxError.style.display='none'
     }
 })
 

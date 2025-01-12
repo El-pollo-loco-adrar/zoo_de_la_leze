@@ -139,10 +139,6 @@ header{
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 }
-/*BOUTON RETOUR ARRIERE*/
-.bouton-retour{
-    margin-top: 10px;
-}
 /* PAGES DU FOOTER,MENTIONS LEGALES, CGU, CONFIDENTIALITE, PROPRIETE INTELLECTUELLE, COOKIES */
 article{
     border: solid lightgray 2px;
@@ -150,7 +146,7 @@ article{
     background-color: whitesmoke;
     text-align: center;
     padding: 4%;
-    margin: 0% 5%;
+    margin: 5% 5%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     ul{
         text-align: left;
@@ -189,13 +185,23 @@ footer{
     }
 }
 
+/*BOUTON RETOUR ARRIERE*/
+.back-button{
+    margin: 2% 0;
+    padding: 5px;
+    background-color: orange;
+    color: black;
+    border-radius: 2px;
+    width: 15%;
+}
 /*PAGES JEU*/
 #containerTotalJeu{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    background-image: linear-gradient(to top, rgba(21, 64, 1, 0.7)0%, rgba(59, 115, 2, 0.7) 85%);
+    
+    /* background-image: linear-gradient(to top, rgba(21, 64, 1, 0.7)0%, rgba(59, 115, 2, 0.7) 85%); */
 }
 #presentationJeu{
     background-image:linear-gradient(to top, rgba(21, 64, 1, 0.7)0%, rgba(59, 115, 2, 0.7) 31%); /*Couleur fond pages jeu*/
@@ -228,8 +234,8 @@ footer{
 #containerTotalConnexion{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+    /* justify-content: space-between;
+    min-height: 100vh; */
     background-image: linear-gradient(to top, rgba(21, 64, 1, 0.7)0%, rgba(59, 115, 2, 0.7) 85%);
 } 
 form{
@@ -246,12 +252,13 @@ form{
             color: black;
             border-radius: 2px;
         }
+
     }     
 }
 .bandeau-seConnecter{
         border-radius: 5px;
-        background-color: #365c36;
-        margin: 0px 50px 20px 50px;
+        
+        
         text-align: center;
 }
 .couleur-connexion{
@@ -265,7 +272,10 @@ form{
     }
     a{
         text-decoration: none;
-        color: orange;
+        color: #1E88E5;
+    }
+    a:hover{
+        text-decoration: underline;
     }
 }
 /*INSCRIPTION JEU*/
