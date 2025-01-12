@@ -1,16 +1,15 @@
  *{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */ /* POUR LES TITRES*/
  }
  /* Masque les sous-menus */
 .submenu {
     display: none;
 }
-
 /* Affiche le sous-menu actif */
 .submenu.active {
     display: block;
 }
-
 /* Cache le menu principal lorsqu'un sous-menu est actif */
 .menu-hidden {
     display: none !important;
@@ -43,21 +42,18 @@ header{
                 background-color: rgb(15, 91, 66, 0.1);
             }
         }
-        .dropdown-submenu .dropdown-menu {
-            top: 100%; /* Place le sous menu juste en dessous */
-            left: 0;   /* Aligne le sous menu avec son parent */
+        .dropdown-submenu .dropdown-menu {/*Permet un bon alignement des menus et du bouton burger*/
+            top: 100%; 
+            left: 0;   
         }
-    
-        .dropdown-submenu{
+        .dropdown-submenu{ /*Place les sous menus sous les menus parent*/
             position: relative;
         }
         .dropdown-menu{
             width: 92vw; /* largeur du menu*/ 
-
             .dropdown-item{
                 background-color: rgb(15, 91, 66, 0.6);
                 margin-bottom: 20px;
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
                 font-style: oblique;
                 font-weight: bold;
             }            
@@ -65,9 +61,7 @@ header{
     }
     .logo{
         position: absolute;
-        align-self: center;
-        
-        
+        align-self: center;       
     }
     .btnAccueil{
         position: absolute;
@@ -89,13 +83,15 @@ header{
 /*TEXTE ACCUEIL*/
 .presentation{
     padding: 20px 25px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    h2{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
     
 }
 /*INSCIPTION NEWSLETTER + BOUTON*/
 .newsLetter{
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-bottom: 30px;
     padding-bottom: 10px;
     background-color: #F5EFE6;
@@ -113,7 +109,7 @@ header{
         color: black;
         text-decoration: none;
         background-color: orange;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     }
 }
 /* CAROUSEL PARC*/
@@ -136,7 +132,6 @@ header{
       color: black;
       text-decoration: none;
       background-color: orange;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 }
 /* PAGES DU FOOTER,MENTIONS LEGALES, CGU, CONFIDENTIALITE, PROPRIETE INTELLECTUELLE, COOKIES */
@@ -147,19 +142,17 @@ article{
     text-align: center;
     padding: 4%;
     margin: 5% 5%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     ul{
         text-align: left;
     }
     h2{
         font-weight: bold;
         font-size: larger;
-    }
-    h4{
-        font-size: larger;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     }
     h5{
         font-size: larger;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     }
 
 }
@@ -170,12 +163,9 @@ footer{
     height: 130px;
     position: relative;
     bottom: 0;
-    
-
     a{
         color: white;
         text-decoration: none;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
     #lienSocial{
 
@@ -207,9 +197,8 @@ footer{
     background-image:linear-gradient(to top, rgba(21, 64, 1, 0.7)0%, rgba(59, 115, 2, 0.7) 31%); /*Couleur fond pages jeu*/
     text-align: center;
     padding: 10px 25px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    #presentationJeu-text1{
-        font-size: larger;
+    h2{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 }
 .lien-jeu{
@@ -217,7 +206,6 @@ footer{
     display: inline-block; /* Pour adapter la taille au contenu */
 }
 .lien-jeu a {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: absolute; 
     top: 50%; 
     left: 50%; 
@@ -239,7 +227,6 @@ footer{
     background-image: linear-gradient(to top, rgba(21, 64, 1, 0.7)0%, rgba(59, 115, 2, 0.7) 85%);
 } 
 form{
-    
     .mb-3{
         padding: 5px 20px;
     }
@@ -252,13 +239,12 @@ form{
             color: black;
             border-radius: 2px;
         }
-
     }     
 }
 .bandeauSeConnecter{
-        text-align: center;
-        padding-top: 10px;
-        text-decoration: underline;
+    text-align: center;
+    padding-top: 10px; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
 }
 .couleur-connexion{
     background-image: linear-gradient(to top, rgba(21, 64, 1, 0.7)0%, rgba(59, 115, 2, 0.7) 85%);
@@ -266,8 +252,10 @@ form{
 #creation-compte{
     p{
         margin: 20px 50px 0px 50px;
+        padding: 5px 10px;
         border-radius: 5px;
         background-color: lightgrey;
+        text-align: center;
     }
     a{
         text-decoration: none;
@@ -302,6 +290,7 @@ form{
         padding: 5px;
         margin-bottom: 10px;
         border: 1px solid #ccc;
+        border-radius: 5px;
     } 
     p{
         width: 100%;
@@ -313,6 +302,7 @@ form{
     #lienCgu{
         text-decoration: none;
         color: orange;
+        
         
     }
     #containerInscriptionButton{ /* BOUTON VALIDER*/
