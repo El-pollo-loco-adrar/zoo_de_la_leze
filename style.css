@@ -51,12 +51,16 @@ header{
         }
         .dropdown-menu{
             width: 92vw; /* largeur du menu*/ 
-            .dropdown-item{
+            .dropdown-item {
                 background-color: rgb(15, 91, 66, 0.6);
                 margin-bottom: 20px;
                 font-style: oblique;
                 font-weight: bold;
-            }            
+            }   
+      
+        }
+        .dropdown-item-menu{
+            text-align: center;
         }
     }
     .logo{
@@ -69,6 +73,7 @@ header{
         right: 20px;
     }
 }
+
 /* BARRE SEPARATION SOUS LE HEADER*/
 #separate{
     border: solid black 2px;
