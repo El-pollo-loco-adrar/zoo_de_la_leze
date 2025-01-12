@@ -234,8 +234,8 @@ footer{
 #containerTotalConnexion{
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between;
-    min-height: 100vh; */
+    justify-content: space-between;
+    min-height: 100vh;
     background-image: linear-gradient(to top, rgba(21, 64, 1, 0.7)0%, rgba(59, 115, 2, 0.7) 85%);
 } 
 form{
@@ -255,11 +255,10 @@ form{
 
     }     
 }
-.bandeau-seConnecter{
-        border-radius: 5px;
-        
-        
+.bandeauSeConnecter{
         text-align: center;
+        padding-top: 10px;
+        text-decoration: underline;
 }
 .couleur-connexion{
     background-image: linear-gradient(to top, rgba(21, 64, 1, 0.7)0%, rgba(59, 115, 2, 0.7) 85%);
