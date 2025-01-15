@@ -30,42 +30,45 @@ function goBack() {
 
 //FORMULAIRE INSCRIPTION
 const form = document.querySelector('#formulaireInscription')
-
-
 const logInputMail = document.querySelector('#email');
 const logInputPassword = document.querySelector('#password');
 const logInputConfirmPassword = document.querySelector('#confirmPassword')
-
-
 const mailMessage = document.querySelector('#messageMail')
-mailMessage.style.textAlign = 'center'
-mailMessage.style.borderRadius = '5px'
-mailMessage.style.Width = '100%'; 
-mailMessage.style.padding = '0px 10px'; 
-
-
 const passwordMessage = document.querySelector('#messagePassword');
-passwordMessage.style.textAlign = 'center'
-passwordMessage.style.borderRadius = '5px'
-passwordMessage.style.Width = '100%'; 
-passwordMessage.style.padding = '0px 10px'; 
-
-
 const passwordConfirmMessage = document.querySelector('#messageConfirmPassword')
-passwordConfirmMessage.style.textAlign= 'center'
-passwordConfirmMessage.style.borderRadius = '5px'
-passwordConfirmMessage.style.padding = '0px 10px'
-passwordConfirmMessage.style.Width = '100%'; 
-
-
-
 const checkbox = document.querySelector('#accept')
 const checkboxError = document.querySelector('#errorCheckbox')
-checkboxError.style.textAlign= 'center'
-checkboxError.style.borderRadius = '5px'
-checkboxError.style.padding = '0px 10px'
-checkboxError.style.Width = '100%'; 
 
+function setMessageStyle(element) {
+    element.style.textAlign = 'center';
+    element.style.borderRadius = '5px';
+    element.style.width = '100%';
+    element.style.padding = '0px 10px';
+}
+
+setMessageStyle(document.querySelector('#messageMail'));
+setMessageStyle(document.querySelector('#messagePassword'));
+setMessageStyle(document.querySelector('#messageConfirmPassword'));
+setMessageStyle(document.querySelector('#errorCheckbox'));
+
+
+
+
+/*FONCTION QUI CHECK EN TEMPS REEL SI MDP CORRESPONDENT*/
+function passwordMatch() {
+    if (logInputPassword.value === logInputConfirmPassword.value && logInputPassword.value !== '') {
+        logInputConfirmPassword.style.border = 'solid 5px green';
+        passwordConfirmMessage.style.backgroundColor = 'green';
+        passwordConfirmMessage.style.display = 'none';
+        inscriptionButton.disabled= false;
+    } else {
+        logInputConfirmPassword.style.border = 'solid 5px red';
+        passwordConfirmMessage.innerText = 'Les mots de passe ne correspondent pas';
+        passwordConfirmMessage.style.backgroundColor = '#E57373';
+        passwordConfirmMessage.style.display = 'block';
+        inscriptionButton.disabled= true;
+    }
+}
 
 /* REGEX MAIL*/ 
 logInputMail.addEventListener('keyup', ()=>{ 
@@ -77,8 +80,8 @@ logInputMail.addEventListener('keyup', ()=>{
     } else {
         logInputMail.style.border = 'solid 5px red'
         mailMessage.innerText = 'Mail non valide'  
-        mailMessage.style.border = 'solid 2px red'  
-        mailMessage.style.backgroundColor = 'red'
+        mailMessage.style.border = 'solid 2px #E57373'  
+        mailMessage.style.backgroundColor = '#E57373'
     }
 })
 
@@ -90,26 +93,26 @@ logInputPassword.addEventListener('keyup', ()=>{
         logInputPassword.style.border = 'solid 5px green'
         passwordMessage.style.display = "none"
     } else{
-        logInputPassword.style.border = 'solid 2px red'
+        logInputPassword.style.border = 'solid 5px red'
         passwordMessage.innerText = "Le mot de passe doit contenir au moins un caractère spécial ($, &, @, ! )"
-        passwordMessage.style.margin = '0px 0px'
-        passwordMessage.style.backgroundColor = 'red'
+        
+        passwordMessage.style.backgroundColor = '#E57373'
     }
-    
+    passwordMatch();
 })
-
 
 logInputConfirmPassword.addEventListener('keyup', () =>{ 
     if(logInputPassword.value === logInputConfirmPassword.value) {
         logInputConfirmPassword.style.border = 'solid 5px green'
         passwordConfirmMessage.style.backgroundColor = 'green'
         passwordConfirmMessage.style.display = 'none'
+        
     } else{
         passwordConfirmMessage.innerText = 'Les mots ne passe ne correspondent pas'
         passwordConfirmMessage.style.backgroundColor = 'red'
     }
+    passwordMatch();
 })
-
 /*OBLIGATION DE CHECKER LA BOX*/
 form.addEventListener('submit', function (e){
     if (!checkbox.checked){
@@ -120,38 +123,3 @@ form.addEventListener('submit', function (e){
     }
 })
 
-// const inscriptionButton = document.querySelector('#inscriptionButton');
-// inscriptionButton.disabled= true;
-
-// function checkFormValidity(){
-//     if(logInputPassword.value && logInputConfirmPassword.value){
-//     inscriptionButton.disabled= false;
-//     }else{
-//         inscriptionButton = true;
-//     }
-// }
-// form.addEventListener('submit', ()=>{
-//     let valid = true;
-//             /*OBLIGATION DE CHECKER LA BOX*/
-//     if(!checkbox.checked){
-//         e.preventDefault();/*Empèche envoie du formulaire si checkbox pas cochée*/
-//         checkboxError.style.display ='block';/*Affiche message du HTML*/
-//         valid = false
-//     } else{
-//         checkboxError.style.display ='none';
-//     }
-//             /*VERIF CONFIRMATION PASSWORD*/ 
-//     if(logInputPassword.value !== logInputConfirmPassword.value){
-//         e.preventDefault();
-//         passwordConfirmMessage.innerText = 'Les mots ne passe ne correspondent pas'
-//         passwordConfirmMessage.style.backgroundColor = 'red'
-//         valid = false
-//     } else {
-//         logInputConfirmPassword.style.border = 'solid 5px green'
-//         passwordConfirmMessage.style.backgroundColor = 'green'
-//         passwordConfirmMessage.style.display = 'none'
-//     }
-//     if (!valid){
-//         e.preventDefault();
-//     }
-// })
