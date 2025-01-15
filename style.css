@@ -15,6 +15,10 @@
     display: none !important;
 }
 
+@media (min-width: 1024px){
+    
+}
+
 /* header */
 header{
     display: flex;

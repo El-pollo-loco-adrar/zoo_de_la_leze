@@ -95,9 +95,10 @@ logInputPassword.addEventListener('keyup', ()=>{
         passwordMessage.style.margin = '0px 0px'
         passwordMessage.style.backgroundColor = 'red'
     }
+    
 })
 
-/*VERIF CONFIRMATION PASSWORD*/ 
+
 logInputConfirmPassword.addEventListener('keyup', () =>{ 
     if(logInputPassword.value === logInputConfirmPassword.value) {
         logInputConfirmPassword.style.border = 'solid 5px green'
@@ -119,3 +120,38 @@ form.addEventListener('submit', function (e){
     }
 })
 
+// const inscriptionButton = document.querySelector('#inscriptionButton');
+// inscriptionButton.disabled= true;
+
+// function checkFormValidity(){
+//     if(logInputPassword.value && logInputConfirmPassword.value){
+//     inscriptionButton.disabled= false;
+//     }else{
+//         inscriptionButton = true;
+//     }
+// }
+// form.addEventListener('submit', ()=>{
+//     let valid = true;
+//             /*OBLIGATION DE CHECKER LA BOX*/
+//     if(!checkbox.checked){
+//         e.preventDefault();/*Empèche envoie du formulaire si checkbox pas cochée*/
+//         checkboxError.style.display ='block';/*Affiche message du HTML*/
+//         valid = false
+//     } else{
+//         checkboxError.style.display ='none';
+//     }
+//             /*VERIF CONFIRMATION PASSWORD*/ 
+//     if(logInputPassword.value !== logInputConfirmPassword.value){
+//         e.preventDefault();
+//         passwordConfirmMessage.innerText = 'Les mots ne passe ne correspondent pas'
+//         passwordConfirmMessage.style.backgroundColor = 'red'
+//         valid = false
+//     } else {
+//         logInputConfirmPassword.style.border = 'solid 5px green'
+//         passwordConfirmMessage.style.backgroundColor = 'green'
+//         passwordConfirmMessage.style.display = 'none'
+//     }
+//     if (!valid){
+//         e.preventDefault();
+//     }
+// })
