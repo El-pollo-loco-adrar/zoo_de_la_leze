@@ -39,7 +39,7 @@ const passwordConfirmMessage = document.querySelector('#messageConfirmPassword')
 const checkbox = document.querySelector('#accept')
 const checkboxError = document.querySelector('#errorCheckbox')
 
-function setMessageStyle(element) {
+function setMessageStyle(element) { /*FONCTION CSS*/
     element.style.textAlign = 'center';
     element.style.borderRadius = '5px';
     element.style.width = '100%';
@@ -76,7 +76,6 @@ logInputMail.addEventListener('keyup', ()=>{
     } else {
         logInputMail.style.border = 'solid 2px red'
         mailMessage.innerText = 'Mail non valide'  
-        
         mailMessage.style.color = 'red'
     }
 })
