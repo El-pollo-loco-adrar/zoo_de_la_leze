@@ -235,17 +235,28 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100vh;
+    min-height: 90vh;
     background-image: linear-gradient(to top, rgba(21, 64, 1, 0.7)0%, rgba(59, 115, 2, 0.7) 85%);
 } 
 form{
+    margin: 0 auto;
+    max-width: max-content;
+    border: solid lightgray 2px;
+    background-color: rgba(245, 245, 245, 0.849);
+    text-align: center;
+    padding: 20px;
     .mb-3{
         padding: 5px 20px;
+    }
+    #forgetPassword{
+        color: black;
+        font-style: italic;
     }
     #containerBtn{
         text-align: center;
         #inscriptionButton{
             margin: auto;
+            margin-top: 10px;
             padding: 5px;
             background-color: orange;
             color: black;
@@ -255,8 +266,13 @@ form{
 }
 .bandeauSeConnecter{
     text-align: center;
-    padding-top: 10px; 
+    
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    margin: 0px 50px 0px 50px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    text-align: center;
 }
 .couleur-connexion{
     background-image: linear-gradient(to top, rgba(21, 64, 1, 0.7)0%, rgba(59, 115, 2, 0.7) 85%);
@@ -266,7 +282,7 @@ form{
         margin: 20px 50px 0px 50px;
         padding: 5px 10px;
         border-radius: 5px;
-        background-color: lightgrey;
+        background-color: whitesmoke;
         text-align: center;
     }
     a{
@@ -281,7 +297,11 @@ form{
 #formulaireInscription{
     margin: 0 auto;
     max-width: max-content;
-    
+    border: solid lightgray 2px;
+    background-color: rgba(245, 245, 245, 0.849);
+    text-align: center;
+    padding: 20px;
+      
     #errorCheckbox{
         display: none;
         max-width: 243.8px;
@@ -309,13 +329,10 @@ form{
         margin: 0px 0px;
     }
     #errorCheckbox{/*CHECKBOX A VALIDER*/
-        background-color: red;
+        color: red;
     }
     #lienCgu{
         text-decoration: none;
-        color: orange;
-        
-        
     }
     #containerInscriptionButton{ /* BOUTON VALIDER*/
         display: flex;

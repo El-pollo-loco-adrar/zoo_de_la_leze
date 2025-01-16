@@ -51,20 +51,16 @@ setMessageStyle(document.querySelector('#messagePassword'));
 setMessageStyle(document.querySelector('#messageConfirmPassword'));
 setMessageStyle(document.querySelector('#errorCheckbox'));
 
-
-
-
 /*FONCTION QUI CHECK EN TEMPS REEL SI MDP CORRESPONDENT*/
 function passwordMatch() {
     if (logInputPassword.value === logInputConfirmPassword.value && logInputPassword.value !== '') {
-        logInputConfirmPassword.style.border = 'solid 5px green';
-        passwordConfirmMessage.style.backgroundColor = 'green';
+        logInputConfirmPassword.style.border = 'solid 2px green'; 
         passwordConfirmMessage.style.display = 'none';
         inscriptionButton.disabled= false;
     } else {
-        logInputConfirmPassword.style.border = 'solid 5px red';
+        logInputConfirmPassword.style.border = 'solid 2px red';
         passwordConfirmMessage.innerText = 'Les mots de passe ne correspondent pas';
-        passwordConfirmMessage.style.backgroundColor = '#E57373';
+        passwordConfirmMessage.style.color = 'red';
         passwordConfirmMessage.style.display = 'block';
         inscriptionButton.disabled= true;
     }
@@ -75,13 +71,13 @@ logInputMail.addEventListener('keyup', ()=>{
     const regexMail = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
 
     if (regexMail.test(logInputMail.value)){
-        logInputMail.style.border = 'solid 5px green'
+        logInputMail.style.border = 'solid 2px green'
         mailMessage.style.display = 'none'
     } else {
-        logInputMail.style.border = 'solid 5px red'
+        logInputMail.style.border = 'solid 2px red'
         mailMessage.innerText = 'Mail non valide'  
-        mailMessage.style.border = 'solid 2px #E57373'  
-        mailMessage.style.backgroundColor = '#E57373'
+        
+        mailMessage.style.color = 'red'
     }
 })
 
@@ -90,29 +86,28 @@ logInputPassword.addEventListener('keyup', ()=>{
     const charSpecial = /[$&@!]/;
 
     if (charSpecial.test(logInputPassword.value)){
-        logInputPassword.style.border = 'solid 5px green'
+        logInputPassword.style.border = 'solid 2px green'
         passwordMessage.style.display = "none"
     } else{
-        logInputPassword.style.border = 'solid 5px red'
+        logInputPassword.style.border = 'solid 2px red'
         passwordMessage.innerText = "Le mot de passe doit contenir au moins un caractère spécial ($, &, @, ! )"
-        
-        passwordMessage.style.backgroundColor = '#E57373'
+        passwordMessage.style.color = 'red'
     }
     passwordMatch();
 })
 
 logInputConfirmPassword.addEventListener('keyup', () =>{ 
     if(logInputPassword.value === logInputConfirmPassword.value) {
-        logInputConfirmPassword.style.border = 'solid 5px green'
-        passwordConfirmMessage.style.backgroundColor = 'green'
+        logInputConfirmPassword.style.border = 'solid 2px green'
         passwordConfirmMessage.style.display = 'none'
         
     } else{
         passwordConfirmMessage.innerText = 'Les mots ne passe ne correspondent pas'
-        passwordConfirmMessage.style.backgroundColor = 'red'
+        
     }
     passwordMatch();
 })
+
 /*OBLIGATION DE CHECKER LA BOX*/
 form.addEventListener('submit', function (e){
     if (!checkbox.checked){
