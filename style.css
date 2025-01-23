@@ -15,14 +15,20 @@
     display: none !important;
 }
 
-@media (min-width: 1024px){   
+@media screen and (min-width: 1024px){
+    header{
+        .fondHeader{
+            height: 300px;
+            background-size: cover;
+        }
+    }  
 }
 
 /* header */
 header{
     display: flex;
     justify-content: center;
-    align-self: center;
+    align-items: center;
     
     .fondHeader{
         position: relative;
