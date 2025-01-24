@@ -13,7 +13,6 @@ document.querySelectorAll('.dropdown-submenu .dropdown-toggle').forEach(function
             }
         });
         
-        
         // Affiche ou masque le sous menu actuel
         const nextMenu = this.nextElementSibling;
         if (nextMenu && nextMenu.classList.contains('dropdown-menu')) {
