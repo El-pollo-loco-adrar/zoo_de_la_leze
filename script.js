@@ -21,6 +21,13 @@ document.querySelectorAll('.dropdown-submenu .dropdown-toggle').forEach(function
     });
 });
 
+//IMPOSSIBLE D'ACCEDER AU JEU DEPUIS GRAND ECRAN
+document.querySelector('.lienJeu').addEventListener('click', function(event){
+    if(window.innerWidth >768){
+        event.preventDefault();
+        window.location.href = "erreurPageJeu.html";
+    }
+});
 //BOUTON RETOUR ARRIERE
 
 function goBack() {
