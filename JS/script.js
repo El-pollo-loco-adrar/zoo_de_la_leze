@@ -25,7 +25,7 @@ document.querySelectorAll('.dropdown-submenu .dropdown-toggle').forEach(function
 document.querySelector('.lienJeu').addEventListener('click', function(event){
     if(window.innerWidth >768){
         event.preventDefault();
-        window.location.href = "erreurPageJeu.html";
+        window.location.href = "/Pages/erreurPageJeu.html";
     }
 });
 //BOUTON RETOUR ARRIERE
