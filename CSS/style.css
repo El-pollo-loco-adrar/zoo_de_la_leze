@@ -68,6 +68,7 @@ nav{
 /* Affichage du sous-menu au survol */
     ul li:hover ul.sousMenu {
         display: block;
+        
     }
 
 /* Ajout un effet de survol sur les liens */
@@ -89,8 +90,19 @@ nav{
         width: 100%;
         height: 30vw;
     }
-
-    /* CAROUSEL PARC*/
+.carousel-control-next-icon {
+    background-image: url(../images/suivant.png) !important; /*AJOUTE L'IMAGE ET FORCE BOOTSTRAP A L'ACCEPTER*/
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+}
+.carousel-control-prev-icon{
+    background-image:  url(../images/precedent.png) !important;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+}
+/* CAROUSEL PARC*/
 #carouselParc{
     display: block;
     margin: 5% 10%;
@@ -100,10 +112,6 @@ nav{
     height: 80vw;
     border-radius: 5%;  
     }
-
-
-
-
 
 /* header */
 header{
@@ -170,42 +178,42 @@ header{
 }
 
     /*TEXTE ACCUEIL*/
-    .presentation{
-        padding: 20px 25px;
+.presentation{
+    padding: 20px 25px;
     
-        h1{
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        p{
-            text-align: center;
-        }
-        
-    }
-    /*INSCIPTION NEWSLETTER + BOUTON*/
-    .newsLetter{
-        text-align: center;
+    h1{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         margin-bottom: 30px;
-        padding-bottom: 10px;
-        background-color: #F5EFE6;
-        
-        p{
-            color: #2B1D00;
-        }
-        .inscription{
-            color: #433831;
-            font-weight: bold;
-        }
-        a{
-            border-radius: 10%;
-            padding: 5px 50px;
-            color: black;
-            text-decoration: none;
-            background-color: orange;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-        }
+        text-align: center;
     }
+    p{
+        text-align: center;
+    }
+        
+}
+    /*INSCIPTION NEWSLETTER + BOUTON*/
+.newsLetter{
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    background-color: #F5EFE6;
+    
+    p{
+        color: #2B1D00;
+    }
+    .inscription{
+        color: #433831;
+        font-weight: bold;
+    }
+    a{
+        border-radius: 10%;
+        padding: 5px 50px;
+        color: black;
+        text-decoration: none;
+        background-color: orange;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    }
+}
 
 
 
@@ -223,7 +231,7 @@ header{
     }
 }
 /* PAGES DU FOOTER,MENTIONS LEGALES, CGU, CONFIDENTIALITE, PROPRIETE INTELLECTUELLE, COOKIES */
-article{
+.obligatoire{
     border: solid lightgray 2px;
     box-shadow: 5px 5px 5px whitesmoke ;
     background-color: whitesmoke;
@@ -494,6 +502,18 @@ form{
             height: auto;
             border-radius: 10px; 
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }  
+        }
+
+    .presentation{/*TEXTE INDEX*/
+        padding: 0 150px;
+    }
+    .newsLetter{/*INSCRIPTION NEWSLETTER INDEX*/
+        border-radius: 2%;
+        margin: 0 10%
+    }
+    .obligatoire{/*PAGES OBLIGATOIRE DU FOOTER*/
+        margin: 0 30%;
+        border-radius: 2%;
+    }
 }
 
