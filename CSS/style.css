@@ -14,6 +14,21 @@
 .menu-hidden {
     display: none !important;
 }
+/* ANIMATIONS */
+@keyframes inscrire{
+    0%{
+        rotate: 0deg;
+    }
+    50%{
+        rotate: 10deg;
+    }
+    100%{
+        rotate: -10deg;
+    }
+}
+
+
+
 
 /*NAVIGATION POUR ECRAN LARGE*/
 nav{
@@ -81,6 +96,12 @@ nav{
 /*IMAGES QUI REMPLACENT CAROUSEL SUR ECRAN LARGE*/
 .imagesGrid{
     display: none;
+    a{
+        transition: transform 0.3s ease;
+    }
+    a:hover{
+        transform: scale(1.1);
+    }
 }
 /*CAROUSEL MENU*/
 #carouselMenu{
@@ -192,6 +213,7 @@ header{
         
 }
     /*INSCIPTION NEWSLETTER + BOUTON*/
+
 .newsLetter{
     text-align: center;
     margin-bottom: 30px;
@@ -212,7 +234,15 @@ header{
         text-decoration: none;
         background-color: orange;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+        transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
     }
+    a:hover{
+        color: #1E88E5;
+        transform: scale(1,1);
+    }
+}
+#inscrire:hover{
+    animation: inscrire 0.5s infinite alternate;
 }
 
 
@@ -222,12 +252,12 @@ header{
     text-align: center;
     padding: 20px;
     a{
-      border: 1px solid black;  
-      border-radius: 10%;
-      padding: 5px;
-      color: black;
-      text-decoration: none;
-      background-color: orange;
+    border: 1px solid black;  
+    border-radius: 10%;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    background-color: orange;
     }
 }
 /* PAGES DU FOOTER,MENTIONS LEGALES, CGU, CONFIDENTIALITE, PROPRIETE INTELLECTUELLE, COOKIES */
@@ -256,18 +286,31 @@ header{
 footer{
     background-color: #2E3835;
     width: 100%;
-    height: 130px;
-    position: relative;
-    bottom: 0;
-    a{
-        color: white;
-        text-decoration: none;
+    height: auto;
+    .socialLinks{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        p{
+            color: white;
         }
-    #lienSocial{
-
-        .bi-facebook{
-            color: blue;
+        a:hover{
+            animation: inscrire 0.2s infinite alternate;
         }
+    }
+    .footerLinks{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        a{
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+    }
+    .footerLinks a:hover{
+        color: #FFD700;
+        transform: scale(1,1);
     }
 }
 
