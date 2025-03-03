@@ -70,6 +70,10 @@ nav{
 
     ul li ul.sousMenu li {
         display: block;
+        width: 100%;  /* Prend toute la largeur du li parent */
+        box-sizing: border-box; /* Assure que le padding ne dépasse pas */
+        padding: 10px;
+        text-decoration: none;
         background-color: rgb(15, 91, 66,0.1);
     }
 
@@ -88,7 +92,7 @@ nav{
 
 /* Ajout un effet de survol sur les liens */
     ul li a:hover {
-        background-color: #55555557;
+        background-color: #55555569;
         border-radius: 10px;
     }
 
@@ -227,23 +231,32 @@ header{
         color: #433831;
         font-weight: bold;
     }
-    a{
-        border-radius: 10%;
-        padding: 5px 50px;
-        color: black;
-        text-decoration: none;
+    input[type="text"]{
+        width: 80%; /* Largeur ajustable */
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    input[type="submit"] {
+        width: 85%; /* Largeur du bouton */
+        padding: 10px;
+        margin-top: 15px;
         background-color: orange;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-        transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        
     }
-    a:hover{
-        color: #1E88E5;
-        transform: scale(1,1);
+    input[type="submit"]:hover{
+        background-color: #e29015;
     }
 }
-#inscrire:hover{
-    animation: inscrire 0.5s infinite alternate;
-}
+
 
 
 
@@ -284,6 +297,7 @@ header{
 }
 /* FOOTER */
 footer{
+    padding: 1% ;
     background-color: #2E3835;
     width: 100%;
     height: auto;
