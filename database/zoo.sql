@@ -78,3 +78,9 @@ ALTER TABLE qr_code
 ALTER TABLE animal
 	ADD CONSTRAINT fk_enclos
     FOREIGN KEY (id_enclos) REFERENCES enclos(id_enclos);
+    
+CREATE TABLE newsletter (
+	id_newsletter INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    email_newsletter VARCHAR(100) NOT NULL UNIQUE,
+    date_inscription_newsletter TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)ENGINE=InnoDB;
