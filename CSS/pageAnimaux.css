@@ -1,4 +1,18 @@
-
+/* ANIMATIONS */
+@keyframes inscrire{
+    0%{
+        rotate: 0deg;
+    }
+    50%{
+        rotate: 5deg;
+    }
+    75%{
+        rotate: -5deg;
+    }
+    100%{
+        rotate: 2deg;
+    }
+}
 .titreAnimaux{
     text-align: center;
     width: 50%;
@@ -14,6 +28,7 @@
         padding: 3%;
         background-color: rgba(15, 91, 66, 0.6);
         border-radius: 2%;
+        transition: transform 0.3s ease-in-out;
     }
 
 }
@@ -39,6 +54,12 @@
         }
     }
 }
+.titreAnimauxSuivant a:hover h3{
+    background-color: rgba(15, 91, 66, 0.6);
+    transform: scale(1.2);
+    animation: inscrire 1s infinite alternate ease-in-out;
+}
+
 .animauxPhotos{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -51,12 +72,15 @@
         margin: 2% auto;
         overflow: hidden;
         text-decoration: none;
+        position: relative;
+        
         img{
             align-items: center;
             width: 100%;
             height: auto;
             border-radius: 2%;     
-            object-fit: cover;   
+            object-fit: cover; 
+            transition: transform 0.3s ease-in-out;
         }
         span{
             margin-top: 5px;
@@ -64,12 +88,22 @@
             padding: 5px 10px;
             border-radius: 5px;
             color: black;
+            background-color: rgba(15, 91, 66, 0.6);
+            text-align: center;
+            width: 100%; 
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
         }
     } 
 }
+.animauxPhotos a:hover img{
+    transform: scale(1.2);
+}
 .animauxPhotos a:hover span {
-    background-color: rgba(15, 91, 66, 0.6);/* Change de couleur au survol */
+    background-color: rgba(255, 165, 0, 0.8);/* Change de couleur au survol */
     color: white;
+    transform: scale(2.2) translateY(-70px);
+
+    
 }
 @media screen and (max-width: 949px){ /* RESPONSIVE SUR ECRAN MOBILE*/
     .animauxPhotos{
