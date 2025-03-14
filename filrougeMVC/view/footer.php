@@ -5,11 +5,11 @@
                 <a href="index.html"><img src="images/iconfb.jpg" alt="logofacebook" style="width: 20px; height: 20px; object-fit: cover;"></a>                   
             </div>
             <div class="footerLinks">
-                <a href="Pages\mentions légales.html">Mentions légales</a>
-                <a href="Pages\CGU.html">Conditions générales d'utilisation</a>
-                <a href="Pages\confidentialités.html">Confidentialité</a>
-                <a href="Pages\propriété intellectuelle.html">Propriété intellectuelle</a>
-                <a href="Pages\cookies.html">Cookies</a>
+                <a href="./controllerMentionsLegales.php">Mentions légales</a>
+                <a href="./controllerCgu.php">Conditions générales d'utilisation</a>
+                <a href="./controllerConfidentialites.php">Confidentialité</a>
+                <a href="./controllerProprieteeIntelectuelle.php">Propriété intellectuelle</a>
+                <a href="./controllerCookies.php">Cookies</a>
             </div>
         </footer>
     
