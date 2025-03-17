@@ -2,7 +2,7 @@
                 <div id="carouselMenu" class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active">
-            <a href="#"><img src="images/carousel1.png" class="d-block w-100" alt="carousel1"></a>
+            <a href="./controller/vitrine/controllerPetitsAnimaux.php"><img src="images/carousel1.png" class="d-block w-100" alt="carousel1"></a>
             </div>
             <div class="carousel-item">
             <a href="#"><img src="images/carousel2.png" class="d-block w-100" alt="carousel2"></a>
@@ -22,7 +22,7 @@
     </div>
                 <!--GRID QUI REMPLACE CAROUSEL ECRAN LARGE-->
     <div id="imagesGrid" class="imagesGrid">
-        <a href="#"><img src="images/carousel1.png" alt="carousel1"></a>
+        <a href="./controller/vitrine/controllerPetitsAnimaux.php"><img src="images/carousel1.png" alt="carousel1"></a>
         <a href="#"><img src="images/carousel2.png" alt="carousel2"></a>
         <a href="#"><img src="images/carousel3.png" alt="carousel3"></a>
     </div>

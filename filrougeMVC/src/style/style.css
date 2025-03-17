@@ -1,7 +1,7 @@
 *{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
     /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */ /* POUR LES TITRES*/
- }
+}
  /* Masque les sous-menus */
 .submenu {
     display: none;
@@ -255,6 +255,9 @@ header{
     input[type="submit"]:hover{
         background-color: #e29015;
     }
+    #messagePHP{
+        color: red;
+    }
 }
 
 
@@ -356,13 +359,13 @@ footer{
 }
 .lien-jeu{
     position: relative; /* Nécessaire pour positionner le texte */
-    display: inline-block; /* Pour adapter la taille au contenu */
+    display: inline-block; 
 }
 .lien-jeu a {
     position: absolute; 
     top: 50%; 
     left: 50%; 
-    transform: translate(-50%, -50%); /* Ajuste le point de référence pour centrer */
+    transform: translate(-50%, -50%); 
     color: white;
     text-decoration: none; 
     font-size: 20px; 
@@ -406,8 +409,6 @@ form{
     }     
 }
 .bandeauSeConnecter{
-    text-align: center;
-    
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     margin: 0px 50px 0px 50px;
     padding: 5px 10px;
@@ -465,7 +466,7 @@ form{
     background-color: rgba(245, 245, 245, 0.849);
     text-align: center;
     padding: 20px;
-      
+
     #errorCheckbox{
         display: none;
         max-width: 243.8px;

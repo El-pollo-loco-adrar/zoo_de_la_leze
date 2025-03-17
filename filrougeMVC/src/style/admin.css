@@ -1,0 +1,161 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .fondHeader{
+        position: relative;
+        width: 100%;
+        height: 100px;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    }
+    .logo{
+        position: absolute;
+        align-self: center;       
+    }
+    .btnAccueil{
+        position: absolute;
+        align-self: center;
+        right: 20px;
+}
+footer{
+    padding: 1% ;
+    background-color: #2E3835;
+    width: 100%;
+    height: auto;
+    .socialLinks{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        p{
+            color: white;
+        }
+        a:hover{
+            animation: inscrire 0.2s infinite alternate;
+        }
+    }
+    .footerLinks{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        a{
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+    }
+    .footerLinks a:hover{
+        color: #FFD700;
+        transform: scale(1,1);
+    }
+}
+
+#containerJeu{
+    background-image: linear-gradient(to top, rgba(21, 64, 1, 0.7)0%, rgba(59, 115, 2, 0.7) 85%);
+
+    h1{
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+        
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: whitesmoke;   
+    }
+    .menuAdmin{
+        text-align: center;
+        list-style-type: none;
+    
+
+    li a:hover{
+        transform: scale(1.3);
+        color: red; 
+    }
+    }
+    #separate{
+        border: solid black 2px;
+        margin-bottom: 2%;
+    }
+    h2{
+        text-align: center;
+        margin-bottom: 2%;
+    }
+    #para{
+        text-align: center;
+        text-decoration: underline;
+        font-style: italic;
+        color: red;
+    }
+    #ajoutAnimal{
+        margin: 0 auto;
+        max-width: max-content;
+        border: solid lightgray 2px;
+        background-color: rgba(245, 245, 245, 0.849);
+        text-align: center;
+        padding: 20px;
+
+        label{
+            margin-bottom: 10px;
+            font-weight: bolder;
+            padding: 1%;
+            
+            
+        }
+        #description{
+            width: 100%;
+            height: 100px;
+        }
+        #inputAge{
+            width: 120px;
+        }
+        input{ 
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        } 
+        .custom-file{
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #610909a2;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 4px 4px 4px rgb(0, 0, 0, 40%);
+            transition: transform 0.3s ease;
+        }
+        .custom-file:hover{
+            transform: scale(1.1);
+            background-color:#219ED3;
+        }
+        input[type="file"]{ /*J'enlève le texte "aucun fichier sélectionné"*/
+            display: none;
+        }
+    }
+}
+#previewContainer{
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+}
+#previewPhoto{
+    object-fit: cover;
+    border-radius: 10%;
+    display: none;
+    max-width: 200px;
+    max-height: 200px;
+    transition: transform 0.3s ease;
+}
+#previewPhoto:hover{
+    transform: scale(1.1);
+}

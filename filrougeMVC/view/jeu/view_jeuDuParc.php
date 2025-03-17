@@ -1,4 +1,4 @@
-   
+
                             <!-- TEXTE PRESENTATION-->
         <div id="presentationJeu">
             <h2>Bienvenue dans notre aventure sauvage !</h2>

@@ -1,0 +1,144 @@
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .fondHeader{
+        position: relative;
+        width: 100%;
+        height: 100px;
+        background-size: cover;
+        background-position: center;
+    }
+
+        /*MENU BURGER*/
+        #menuContent {
+            display: none;
+            position: absolute;
+            top: 70px; 
+            left: 20px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80vw;
+    
+        }
+        
+        /* Style des liens */
+        #menuContent a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+        
+        /* Effet d’apparition */
+        #menuContent.active {
+            display: block;
+        }
+
+    .dropdown-toggle::after{
+        content: none; /* Enlève l'icone de Bootstrap */
+    }
+    .btnGroup{ /*Menu burger*/
+        position: absolute;
+        align-self: center;
+        left: 20px;
+       
+        .dropdown-menu .dropdown-menu { /*Sous menus*/
+            background-color: white;
+            .dropdown-item{
+                background-color: rgb(15, 91, 66, 0.1);
+            }
+        }
+        .dropdown-submenu .dropdown-menu {/*Permet un bon alignement des menus et du bouton burger*/
+            top: 100%; 
+            left: 0;   
+        }
+        .dropdown-submenu{ /*Place les sous menus sous les menus parent*/
+            position: relative;
+        }
+        .dropdown-menu{
+            width: 92vw; /* largeur du menu*/ 
+            .dropdown-item {
+                background-color: rgb(15, 91, 66, 0.6);
+                margin-bottom: 20px;
+                font-style: oblique;
+                font-weight: bold;
+            }   
+      
+        }
+        .dropdown-item-menu{
+            text-align: center;
+        }
+    }
+    .logo{
+        position: absolute;
+        align-self: center;       
+    }
+    .btnAccueil{
+        position: absolute;
+        align-self: center;
+        right: 20px;
+    }
+}
+footer{
+    padding: 1% ;
+    background-color: #2E3835;
+    width: 100%;
+    height: auto;
+    .socialLinks{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        p{
+            color: white;
+        }
+        a:hover{
+            animation: inscrire 0.2s infinite alternate;
+        }
+    }
+    .footerLinks{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        a{
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+    }
+    .footerLinks a:hover{
+        color: #FFD700;
+        transform: scale(1,1);
+    }
+}
+
+#containerJeu{
+    background-image: linear-gradient(to top, rgba(21, 64, 1, 0.7)0%, rgba(59, 115, 2, 0.7) 85%);
+   
+    h1{
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+        margin: 0px 50px 0px 50px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: whitesmoke;
+        
+    }
+    #startJeu{
+        
+        
+        
+        background-color: whitesmoke;
+        border-radius: 5px;
+        text-align: center;
+        width: 60%;
+        height: auto;
+        margin: 10% auto 0 auto;
+        padding: 5%;
+
+    }
+    
+}
